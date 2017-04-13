@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="C:\Users\jonat\Downloads\musichistory (2).db"/><window><current_tab id="3"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="150"/><column_width id="3" width="3372"/><expanded_item id="0" parent="-1"/><expanded_item id="1" parent="-1"/><expanded_item id="2" parent="-1"/><expanded_item id="3" parent="-1"/></tab_structure><tab_browse><current_table name="Song"/><default_encoding codec=""/><browsetable_info data="AAAABAAAAAgAUwBvAG4AZ/NR+dAAAAKbAAAAAAAAAAAAAAAAAP////8AAAAKAEcAZQBuAHIAZfNzsPAAAAKbAAAAAAAAAAAAAAAAAP////8AAAAMAEEAcgB0AGkAcwB08zkf8AAAApsAAAAAAAAAAAAAAAAA/////wAAAAoAQQBsAGIAdQBt8wgH8AAAApsAAAAAAAAAAQAAAAYAAAAAAAAAAAD/////"/></tab_browse><tab_sql><sql name="music_history2.sql">select * from Genre
+--Added Artist to artist table
+insert into artist values (null, 'Welshly Arms', 2013);
+
+--Added Album to album table
+insert into Album values (null, 'Covers EP', '2014', 2451, 'Good label', 28, 3);
+insert into Album values (null, 'Welshley Arms', '2016', 2471, 'Good label', 28, 3);
+
+--Added songs to songs table
+insert into Song values (null, &quot;Ain't Supposed to Rain&quot;, 400, '2016', 3, 28, 24);
+insert into Song values (null, &quot;The Touch&quot;, 400, '2016', 3, 28, 24);
+
+select Song.Title, Album.Title, Artist.ArtistName
+from Song
+left join Artist on Song.ArtistId = Artist.ArtistId
+left join Album on Album.GenreId = Song.GenreId
+where Album.Title = &quot;Welshley Arms&quot;
+
+select count(Song.Title), Album.Title
+from Song, Album
+where Album.AlbumId = Song.AlbumId
+group by Album.AlbumId
+
+select count(Song.Title), Artist.ArtistName
+from Song, Artist
+where Song.ArtistId = Artist.ArtistId
+group by Song.ArtistId
+
+select count(Song.Title) as Number_of_songs, Genre.Label
+from Song, Genre
+where Song.GenreId = Genre.GenreId
+group by Song.GenreId
+
+select max(AlbumLength) as Album_Length, Album.Title
+from Album
+
+select max(SongLength), Song.Title, Album.Title
+from Song, Album
+
+
+</sql><current_tab id="0"/></tab_sql></sqlb_project>
