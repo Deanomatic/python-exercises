@@ -13,8 +13,9 @@ class Company():
         """Returns the name of the company"""
         return self.name
 
-class Employee():
+class Employee(Company):
     def __init__(self, name, salary, title, start_date):
+        Company.__init__(self)
         self.name = name
         self.salary = salary
         self.title = title

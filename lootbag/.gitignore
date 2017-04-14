@@ -1,0 +1,3 @@
+__pycache__
+
+python -m unittest discover -s . -p "test_lootbag.py" -v

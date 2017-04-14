@@ -18,7 +18,7 @@ for purchase in purchases:
 	total_price = number_of_shares * purchase_price
 	full_company_name = stock[ticker]
 
-for ticker, name in stock.items():
+for ticker, name in stock.items():#itmes()returns a dicts key value pairs
 	total_investment = 0
 	for purchase in purchases:
 		if purchase[0] == ticker:

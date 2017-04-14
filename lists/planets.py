@@ -1,4 +1,4 @@
-solar_system = list()
+solar_system = list()#empty list ready to add stuff on to
 solar_system = ["Mercury", "Mars"]
 solar_system.append("Saturn")
 solar_system.append("Jupiter")
