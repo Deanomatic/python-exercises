@@ -5,7 +5,6 @@ class LootBag():
 		vincents_toys.append("Ball")
 
 	def list_toys_for_child():
-		pass
-
-
+		pass 
+		
 

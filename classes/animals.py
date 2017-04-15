@@ -7,7 +7,6 @@ class Animal:
         self.species = species
         self.speed = 0
         self.legs = 0
-
     def getName(self):
         return self.name
 
