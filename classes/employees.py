@@ -1,12 +1,9 @@
 class Company():
     """This represents a company in which people work"""
 
-    def __init__(self, name, employees):
+    def __init__(self, name):
         self.name = name
         self.employees = list()
-
-    def hire_employees():
-        pass
 
 
     def get_name(self):
@@ -15,7 +12,7 @@ class Company():
 
 class Employee(Company):
     def __init__(self, name, salary, title, start_date):
-        Company.__init__(self)
+        super().__init__(name)
         self.name = name
         self.salary = salary
         self.title = title
@@ -32,7 +29,7 @@ jessica = Employee("Jessica", "$$$", "Lil Dev", "soon")
 print(dean.name + " makes " + dean.salary + " as a company " + dean.title)
 print(will.name + " makes " + will.salary + " as a company " + will.title)
 print(jessica.name + " makes " + jessica.salary + " as a company " + jessica.title)
-good_company = Company("Good Company", dean)
+good_company = Company("Good Company")
 
 print(Employee)
 

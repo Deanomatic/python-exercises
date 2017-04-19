@@ -61,7 +61,7 @@ class Cat(Animal, IsWhiskered, IsClawed):
         IsWhiskered.__init__(self)
         IsClawed.__init__(self)
         self.retractable = True
-        print("Cat constructor")
+    print("Cat constructor")
 
     def walk(self):
         self.speed = self.speed + (0.25 * self.legs)
@@ -77,7 +77,7 @@ class Dog(Animal):
             # NOTE: to get this. We run line 27 (Animal.__init__(self, name, "Dog"))
             # NOTE:
 
-    def walk(self):
+    def walk(self, speed):
         self.speed = self.speed + (0.2 * self.legs)
 
 ######################
@@ -90,3 +90,5 @@ fido = Dog('Fido')
 print(fido)
 tommy = Animal('Tommy', 'Tortoise')
 print(tommy)
+jerry = Cat('Jerry')
+print(jerry)
