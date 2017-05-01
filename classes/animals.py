@@ -48,7 +48,7 @@ class IsWhiskered:
 
     def loseWhisker(self, count):
         # NOTE: loseWhisker is a method of a class
-        self.whiskers_count -= count
+        self.whiskers_count -= count 
 
 ######################
 # Cat

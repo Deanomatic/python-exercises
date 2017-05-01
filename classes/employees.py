@@ -9,7 +9,7 @@ class Company():
     def get_name(self):
         """Returns the name of the company"""
         return self.name
-
+ 
 class Employee(Company):
     def __init__(self, name, salary, title, start_date):
         super().__init__(name)

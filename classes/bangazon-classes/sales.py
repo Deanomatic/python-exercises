@@ -1,15 +1,18 @@
 from bangazon import Department
 
-class sales(Department):
-    def __init__(self, contact_info, number_of_employees, manager):
-        super(sales).__init__(contact_info, number_of_employees, manager).get_budget()
-        self.contact_info = "123-321-4312"
-        self.number_of_employees = "17"
-        self.manager = "Wanda Ling"
-        self.dep_name = "Sales"
+class Sales(Department): 
+    def __init__(self, name, contact_info, number_of_employees, manager):
+
+        super().__init__(name, contact_info, number_of_employees, manager)
+        self.name = name
+        self.contact_info = contact_info
+        self.number_of_employees = number_of_employees
+        self.__manager = manager
     
     def get_budget(self):
         self.budget += '$5,000'
         return self.budget
 
-Sales = sales()
+new_sales = Sales("Sales", "345-747-0987", "4", "Hector Jonson")
+
+print(new_sales)`
